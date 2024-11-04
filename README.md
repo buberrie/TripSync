@@ -44,17 +44,13 @@ To run this project locally, ensure you have **Node.js** installed.
 
 3. **Configure API Keys**:
     - Get an API key from the [Google Cloud Console](https://console.cloud.google.com/) and enable Google Maps JavaScript API.
-    - Create a `.env` file at the root and add your API key:
-      ```plaintext
-      VITE_GOOGLE_MAPS_API_KEY=YOUR_GOOGLE_MAPS_API_KEY
-      ```
 
 4. **Run the Application**:
     ```bash
     npm run dev
     ```
 
-5. Open your browser and navigate to `http://localhost:3000`.
+5. Open your browser and navigate to `http://localhost:5173`.
 
 ## Usage
 
@@ -72,7 +68,6 @@ src/
 ├── views/                 # Application views (e.g., main journey planner page)
 ├── App.vue                # Main app component
 ├── main.js                # Application entry point
-├── router/                # Vue Router setup (if applicable)
-├── store/                 # Vuex store (if used for state management)
-└── utils/                 # Utility functions (e.g., distance calculations, map setup)
-.env                       # Environment variables (e.g., API keys)
+├── router/                # Vue Router setup
+
+
