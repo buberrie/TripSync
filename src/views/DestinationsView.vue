@@ -68,7 +68,7 @@ const handleUpdateJourneyData = (updatedJourneyData) => {
 </script>
 
 <template>
-  <div class="flex flex-col justify-center items-center md:p-10 p-4 md:w-[90%] w-full mx-auto">
+  <div class="flex flex-col justify-center items-center md:p-10 p-4 md:w-[90%] w-full max-w-[1440px] mx-auto">
     <!-- Destination Form where users can enter destination address -->
     <DestinationForm
       :destinations="destinations"
