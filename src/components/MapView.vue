@@ -242,8 +242,8 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="my-10 p-4 bg-gray-50 rounded-lg shadow-md w-full">
-    <div ref="mapContainer" class="h-96 w-full rounded-lg overflow-hidden border border-gray-200 shadow-sm"></div>
+  <div class="my-10 md:p-4 p-2 bg-gray-50 rounded-lg shadow-md w-full">
+    <div ref="mapContainer" class="md:h-[30rem] h-[20rem] w-full rounded-lg overflow-hidden border border-gray-200 shadow-sm"></div>
     <h2 class="mt-6 text-lg font-semibold text-gray-700">
       <span class="text-gray-500">Your Location:</span> {{ userAddress }}
     </h2>
