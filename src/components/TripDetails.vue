@@ -11,7 +11,7 @@ const formatDuration = (seconds) => {
 </script>
 
 <template>
-  <div class="p-6 bg-gray-50 rounded-lg shadow-md w-full space-y-6 md:p-8 lg:w-3/4 xl:w-1/2 mx-auto">
+  <div class="p-6 bg-gray-50 rounded-lg shadow-md w-full space-y-6 md:p-8 w-full mx-auto">
     <div>
       <h2 class="text-2xl font-bold text-gray-700 mb-4">Journey Summary</h2>
       <div v-for="(leg, index) in journeyData.segments" :key="index" class="journey-segment p-4 border-b border-gray-200">
