@@ -4,7 +4,7 @@ import { Loader } from "@googlemaps/js-api-loader";
 
 const emit = defineEmits(["addDestination"]);
 const newDestination = ref("");
-const apiKey = import.meta.env.VUE_APP_GOOGLE_MAPS_API_KEY;
+const apiKey = "AIzaSyB2fNUhOzh1pU4S05bQAZLXn7BX9ZumsGc"; 
 const autocomplete = ref(null);
 const predictions = ref([]);
 const googleMaps = ref(null); // Store Google Maps instance

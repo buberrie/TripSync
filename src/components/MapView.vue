@@ -3,7 +3,7 @@ import { onMounted, ref, watch } from "vue";
 import { Loader } from "@googlemaps/js-api-loader";
 
 // Define your API key and create a single loader instance
-const apiKey = import.meta.env.VUE_APP_GOOGLE_MAPS_API_KEY;
+const apiKey = "AIzaSyB2fNUhOzh1pU4S05bQAZLXn7BX9ZumsGc";
 const loader = new Loader({
   apiKey: apiKey,
   version: "weekly",
