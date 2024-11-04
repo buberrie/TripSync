@@ -57,7 +57,7 @@ watch(locations, onReorder, { deep: true });
 </script>
 
 <template>
-  <ul ref="parent" class="bg-gray-100 border border-gray-300 p-6 rounded-lg shadow-lg mx-auto w-full">
+  <ul v-if="props.destinations" ref="parent" class="bg-gray-100 border border-gray-300 p-6 rounded-lg shadow-lg mx-auto w-full">
     <li
       v-for="(location, index) in locations"
       :key="location.name"
