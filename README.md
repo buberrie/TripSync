@@ -19,7 +19,6 @@ This project is a responsive, interactive journey planner built with Vue.js. Use
 - **Journey Summary**: Displays each segment of the journey, including origin, destination, distance, and duration.
 - **Total Journey Summary**: Provides cumulative data on the total distance, time, and estimated fuel requirements.
 - **Map Display**: Shows the travel route with directions, supporting a visual preview of the entire journey.
-- **Travel Mode Selection**: Allows users to choose driving mode to receive optimized directions and fuel calculations.
 
 ## Technologies
 
