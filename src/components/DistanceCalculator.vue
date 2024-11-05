@@ -15,8 +15,7 @@ const fetchDistanceAndTime = async (origin, destination) => {
                 travelMode: selectedTravelMode.value,
             },
             (response, status) => {
-                console.log("Distance Matrix Response:", response); // Log the response
-                console.log("Status:", status); // Log the status
+                // console.log("Status:", status); // Log the status
                 if (status === "OK") {
                     const result = response.rows[0].elements[0];
                     if (result.status === "OK") {
@@ -64,9 +63,7 @@ const calculateJourneyData = async () => {
     for (let i = 0; i < allDestinations.length - 1; i++) {
         const origin = allDestinations[i];
         const destination = allDestinations[i + 1];
-        console.log("destination:", allDestinations)
-        console.log("Origin:", origin); // Log origin
-        console.log("Destination:", destination); // Log destination
+        // console.log("Destination:", destination); // Log destination
         try {
             const { distance, duration, distanceValue, durationValue } = await fetchDistanceAndTime(origin, destination);
             segments.push({ origin, destination, distance, duration, distanceValue, durationValue });
@@ -97,8 +94,6 @@ const calculateFuelNeeded = (distance) => {
 watch(
     () => [props.destinations, props.receivedUserAddress],
     async ([newDestinations, newUserAddress]) => {
-        console.log("New User Address:", newUserAddress); // Log new user address
-        console.log("New Destinations:", newDestinations); // Log new destinations
         if (newUserAddress && newDestinations.length > 0) {
             await calculateJourneyData();
         }

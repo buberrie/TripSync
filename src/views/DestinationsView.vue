@@ -8,14 +8,13 @@ import DistanceCalculator from "@/components/DistanceCalculator.vue";
 
 // State for destinations and journey summary data
 const destinations = ref([]);
-const userAddress = ref({});
 const journeyData = ref({
   totalDistance: 0,
   totalTime: 0,
   fuelNeeded: 0,
 });
 
-const userAddressFromMapView = ref('');
+const userAddressFromMapView = ref({});
 
 // Load destinations from local storage when component is mounted
 onMounted(() => {
@@ -42,7 +41,6 @@ const handleAddDestination = (newDestination) => {
     alert('This destination has been added already.');
   } else {
     destinations.value.push(newDestination);
-    console.log('Updated destinations:', destinations.value);
     // Store updated destinations in local storage
     localStorage.setItem('destinations', JSON.stringify(destinations.value));
   }
@@ -55,8 +53,6 @@ const handleUpdateDestination = (destination) => {
     lat: destination.lat,
     lng: destination.lng,
   };
-
-  console.log(destinations.value);
   // Store updated destinations in local storage
   localStorage.setItem('destinations', JSON.stringify(destinations.value));
 };
@@ -79,7 +75,6 @@ const handleUpdateJourneyData = (updatedJourneyData) => {
     <!-- Map component where users can add destinations -->
     <MapView
       :destinations="destinations"
-      :userAddress="userAddress"
       @sendUserAddress="receiveUserAddress"
       @addDestination="handleAddDestination"
       @updateDestination="handleUpdateDestination"
